@@ -1,9 +1,13 @@
+spring:
+  application:
+    name: eureka-server
 server:
   port: 8761
-
 eureka:
+  instance:
+    hostname: eureka
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://192.168.254.188:8761/eureka/
